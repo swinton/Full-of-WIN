@@ -26,6 +26,15 @@
       body {
         padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
       }
+      ul {
+          list-style: disc outside url("images/underscore_bullet.gif");
+      }
+      li {
+          color: inherit;
+      }
+      a.disabled {
+          cursor: not-allowed;
+      }
       .topbar a.brand {
           background: url(http://www.gravatar.com/avatar/e71b08c5d852c8e08ee4712c46f861c6?s=40) no-repeat;
           padding-left: 50px;
@@ -43,6 +52,7 @@
       }
       .container > footer p {
         text-align: center; /* center align it with the container */
+        color: #fff;
       }
       .container {
         width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
@@ -67,23 +77,6 @@
         padding: 20px 20px 10px;
         margin: -20px -20px 20px;
       }
-
-      /* Styles you shouldn't keep as they are for displaying this base example only */
-      .content .span10,
-      .content .span4 {
-        min-height: 500px;
-      }
-      /* Give a quick and non-cross-browser friendly divider */
-      .content .span4 {
-        margin-left: 0;
-        padding-left: 19px;
-        border-left: 1px solid #eee;
-      }
-
-      .topbar .btn {
-        border: 0;
-      }
-
     </style>
     
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -107,15 +100,153 @@
             <div class="page-header">
                 <h1>R&#233;sum&#233;</h1>
             </div>
-            <div class="row">
-                <div class="span14">
-                    <h2>Main content</h2>
+            
+            <section id="profile" class="row">
+                <div class="offset1 span12">
+                    <h2>Profile</h2>
+                    <p>A highly experienced and resourceful developer, combining passion with creativity, 
+                        who loves to ship and does so consistently under demanding conditions.</p>
                 </div>
-            </div>
+            </section>
+            
+            <section id="objective" class="row">
+                <div class="offset1 span12">
+                    <h2>Objective</h2>
+                    <p>To create world-class web applications that engage, inform and inspire, and 
+                        ultimately affect positive change in the world.</p>
+                </div>
+            </section>
+            
+            <section id="credentials" class="row">
+                <div class="offset1 span12">
+                    <h2>Credentials</h2>
+                </div>
+                <div class="row">
+                    <div class="offset1 span6">
+                        <ul>
+                            <li>10 years experience of enterprise software and web development;</li>
+                            <li>Multiple projects for high-profile <abbr title="Financial Times and Stock Exchange">FTSE</abbr>-350s, major non-profits and government organisations;</li>
+                            <li>Proficient in several languages, including Python, JavaScript, Java, PHP;</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul>
+                            <li>Highly capable across the full project lifecycle, from initial idea generation, through to specification and delivery;</li>
+                            <li>Adept across a range of disciplines, including project management, people management and UX design.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="employment" class="row">
+                <div class="offset1 span12">
+                    <h2>Employment</h2>
+                    <h3><a href="http://www.nixonmcinnes.co.uk/">NixonMcInnes</a> Head of Applied Technology <small>Brighton, UK &mdash; August 2007 to present</small></h3>
+                    <h4>Achievements</h4>
+                </div>
+                <div class="row">
+                    <div class="offset1 span6">
+                        <ul>
+                            <li>Established an enterprising and profitable technology-focused practice within this social web consultancy, in under 2 years;</li>
+                            <li>Defined technical services that were entirely new to the market, e.g. <a href="http://www.datacopter.com/">Datacopter</a>, and delivered them profitably for <abbr title="Financial Times and Stock Exchange">FTSE</abbr>-350s, major non-profits and government organisations (clients include <a href="http://www.channel4.com/">Channel 4</a>, <a href="http://www.o2.co.uk/">O2</a>, <a href="http://www.wwf.org.uk/"><abbr title="World Wide Fund for Nature">WWF</abbr></a>, <a href="http://www.rspca.org.uk/"><abbr title="The Royal Society for the Prevention of Cruelty to Animals">RSPCA</abbr></a>, <a href="http://www.fco.gov.uk/"><abbr title="British Foreign &amp; Commonwealth Office">FCO</abbr></a> and <a href="http://www.barclaycard.co.uk/">Barclaycard</a>);</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul>
+                            <li>Innovated continually with emerging technologies, rapidly producing prototypes for new products and services such as <a href="http://twitter.com/nmstereo">@nmstereo</a>, an office stereo powered by Twitter and Spotify and &#8216;#timetags&#8217;, a method of tracking time more effectively using Google Calendar and hashtags.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="offset1 span12">
+                    <h3><a href="http://www.oracle.com/">Oracle Corporation</a> Senior Software Engineer <small>Reading, UK &mdash; October 2001 to August 2007</small></h3>
+                    <h4>Achievements</h4>
+                </div>
+                <div class="row">
+                    <div class="offset1 span6">
+                        <ul>
+                            <li>Developing enterprise grade software applications for commercial use worldwide;</li>
+                            <li>Complying with security, usability, accessibility and i18n guidelines;</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul>
+                            <li>Producing functional designs and prototyping new product features;</li>
+                            <li>Data modelling and database design;</li>
+                            <li>Automating system test suites.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="recent-projects" class="row">
+                <div class="offset1 span12">
+                    <h2>Recent projects</h2>
+                    <h3>Channel 4 &mdash; &#8216;Drugs Live: Ecstasy on Trial&#8217; &mdash; HTML5 game <small>January 2012</small></h3>
+                    <ul>
+                        <li>An interactive cognitive test, to be used alongside a new Channel 4 documentary exploring the physiological effects of taking ecstasy;</li>
+                        <li>Allowing viewers to participate in a nationwide scientific test, replicating the in-studio experience;</li>
+                        <li>Front-end built in HTML5/JavaScript, maximising penetration on target platforms (desktop, iOS, Android);</li>
+                        <li>nginx, Python, Django, MySQL, HTML5, JavaScript, jQuery, Backbone.js, Amazon EC2;</li>
+                        <li><span class="label success">New!</span> Launching January 2012.</li>
+                    </ul>
+                    <h3>O2 &mdash; &#8216;National Treasures&#8217; &mdash; Facebook app <small>August 2011</small></h3>
+                    <ul>
+                        <li>A Facebook app, where user-submitted national treasures were pitted against each other in a &#8216;Hot or Not&#8217; style face-off;</li>
+                        <li>Building a valuable &#8216;preferences database&#8217; for players in the background;</li>
+                        <li>nginx, Python, Django, MySQL, HTML, jQuery, Facebook API, Amazon EC2;</li>
+                        <li><span class="label warning">Offline</span> <a class="disabled">http://apps.facebook.com/national-treasures/</a></li>
+                    </ul>
+                    <h3>Channel 4 &mdash; The Promise &#8216;Twitter Tracker&#8217; &mdash; Twitter visualisation <small>February 2011</small></h3>
+                    <ul>
+                        <li>Capturing and visualising opinions and reactions on Twitter to Channel 4&#8217;s controversial drama, <a href="http://www.channel4.com/programmes/the-promise/">The Promise</a>, in real-time;</li>
+                        <li>Using natural language and clustering algorithms to detect trends and topics in the online conversation, and encouraging exploration interactively on Channel4.com;</li>
+                        <li>Attracted 500,000 visits to website during &#8216;<abbr title="transmission">TX</abbr>&#8217;, 10% of the viewing audience;</li>
+                        <li>300% increase in web traffic compared to broadcast industry average;</li>
+                        <li>Featured favourably in <a href="http://www.broadcastnow.co.uk/news/multi-platform/twitter-tracker-draws-visitors-to-the-promise/5025344.article">Broadcast Magazine</a>;</li>
+                        <li>Apache, Python, Django, celery, MySQL, NLTK, NetworkX, Processing, Flash, Twitter API, Amazon EC2;</li>
+                        <li><a href="http://www.channel4.com/programmes/the-promise/articles/twitter-tracker">http://www.channel4.com/programmes/the-promise/articles/twitter-tracker</a>.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="education" class="row">
+                <div class="offset1 span12">
+                    <h2>Education</h2>
+                    <ul>
+                        <li>BSc (Hons) Mathematics (including Statistics, Economics, Programming);</li>
+                        <li>&#8216;<abbr title="Advanced Level General Certificate of Education">A-levels</abbr>&#8217; in Mathematics, Physics and Graphical Communication.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="interests" class="row">
+                <div class="offset1 span12">
+                    <h2>Interests</h2>
+                </div>
+                <div class="row">
+                    <div class="offset1 span6">
+                        <ul>
+                            <li>Internet business models and lean startups;</li>
+                            <li>Hacker news;</li>
+                            <li>Big Data and NoSQL;</li>
+                            <li>The Internet of Things;</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <ul>
+                            <li>Graph theory;</li>
+                            <li>Machine learning;</li>
+                            <li>Books by Cory Doctorow;</li>
+                            <li>Independent music of the late 80s /early 90s.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
         </div>
 
         <footer>
-            <!-- <p>&copy; S Winton 2011</p> -->
+            <p>&copy; Steve Winton 2012</p>
         </footer>
 
     </div>
