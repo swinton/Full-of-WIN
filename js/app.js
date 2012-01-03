@@ -28,6 +28,12 @@
         template_id: "#resume-template"        
     });
     
+    var ContactView = SimpleView.extend({
+        id: 'contact-wrapper',
+        className: 'wrapper',
+        template_id: "#contact-template"
+    });
+    
     // ==========================================================================================    
     // Router
     // ==========================================================================================
@@ -45,12 +51,17 @@
             _.bindAll(this);
             this.homeView = new HomeView();
             this.resumeView = new ResumeView();
+            this.contactView = new ContactView();
         },
         
         render: function(view) {
             var $container = $("#main");
             $container.empty();
             $container.append(view.render().el);
+        },
+        
+        modal: function(view) {
+            
         },
         
         home: function() {
@@ -64,6 +75,7 @@
         },
         
         contact: function() {
+            this.render(this.contactView);
             this.activate($(".nav a[href=#contact]").parent());
         },
         

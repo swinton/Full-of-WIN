@@ -41,11 +41,23 @@
           height: 32px;
           width: 32px;
       }
+      a.iconize-large {
+          text-indent: -9999px;
+          float: right;
+          height: 48px;
+          width: 48px;
+      }
       a.twitter {
           background: url("images/twitter-32x32.png") no-repeat scroll 0 0 transparent;
       }
+      a.twitter-large {
+          background: url("images/twitter-48x48.png") no-repeat scroll 0 0 transparent;
+      }
       a.linkedin {
           background: url("images/linkedin-32x32.png") no-repeat scroll 0 0 transparent;
+      }
+      a.linkedin-large {
+          background: url("images/linkedin-48x48.png") no-repeat scroll 0 0 transparent;
       }
       a.github {
           background: url("images/github-32x32.png") no-repeat scroll 0 0 transparent;
@@ -58,6 +70,12 @@
       }
       a.lanyrd {
           background: url("images/lanyrd-32x32.png") no-repeat scroll 0 0 transparent;
+      }
+      a.mail-large {
+          background: url("images/email-48x48.png") no-repeat scroll 0 0 transparent;
+      }
+      a.skype-large {
+          background: url("images/skype-48x48.png") no-repeat scroll 0 0 transparent;
       }
       .topbar a.brand {
           background: url(http://www.gravatar.com/avatar/e71b08c5d852c8e08ee4712c46f861c6?s=40) no-repeat;
@@ -103,8 +121,16 @@
       }
       
       /* Misc */
-      #elsewhere .row {
+      #elsewhere .row, #contact-wrapper .row {
           margin-bottom: 10px;
+      }
+      #contact-wrapper a {
+          font-size: 14px;
+          font-weight: 200;
+          height: 48px;
+          display: block;
+          float: left;
+          padding: 15px 0 0;
       }
     </style>
     
@@ -135,7 +161,7 @@
     
     <section id="about" class="row">
         <div class="offset1 span12">
-            <h2>Here&#8217;s a little bit about me&hellip;</h2>
+            <h2>A little bit about me&hellip;</h2>
             
             <p>I work with <a href="http://www.nixonmcinnes.co.uk/">NixonMcInnes</a>, heading up the 
                 <a href="http://www.nixonmcinnes.co.uk/what-we-do/applied-technology/">Applied Technology</a> practice where, 
@@ -321,6 +347,27 @@
             </div>
         </div>
     </section>
+    
+    </script>
+    
+    <script type="text/template" id="contact-template">
+    <div class="page-header">
+        <h1>Contact</h1>
+    </div>
+        
+    <div class="row">
+        <div class="offset3 span1"><a href="mailto:steve.winton@gmail.com" class="iconize-large mail-large" title="E-mail">E-mail</a></div>
+        <div class="span4"><a href="mailto:steve.winton@gmail.com">steve.winton@gmail.com</a></div>
+        <div class="span1"><a href="http://twitter.com/intent/tweet?text=%40steveWINton" class="iconize-large twitter-large" title="Twitter">Twitter</a></div>
+        <div class="span4"><a href="http://twitter.com/intent/tweet?text=%40steveWINton">@steveWINton</a></div>
+    </div>
+            
+    <div class="row">
+        <div class="offset3 span1"><a href="http://j.mp/447957642895" class="iconize-large skype-large" title="Skype">Skype</a></div>
+        <div class="span4"><a href="http://j.mp/447957642895">+44 7957 642 895</a></div>
+        <div class="span1"><a href="http://www.linkedin.com/in/stephenwinton" class="iconize-large linkedin-large" title="LinkedIn">LinkedIn</a></div>
+        <div class="span4"><a href="http://www.linkedin.com/in/stephenwinton">linkedin.com/in/stephenwinton</a></div>
+    </div>
     
     </script>
 </head>
