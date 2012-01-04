@@ -74,22 +74,22 @@
         
         home: function() {
             this.render(this.homeView);
-            this.activate($(".topbar a.brand"));
+            this.activate($(".nav a[href=#]").parent());
         },
         
         resume: function() {
             this.render(this.resumeView);
-            this.activate($(".nav a[href=#resume]").parent());
+            this.activate($(".nav a[href$=resume]").parent());
         },
         
         contact: function() {
             this.render(this.contactView);
-            this.activate($(".nav a[href=#contact]").parent());
+            this.activate($(".nav a[href$=contact]").parent());
         },
         
         colophon: function() {
             this.render(this.colophonView);
-            this.activate($("footer a[href=#colophon]"));
+            this.activate($("footer a[href$=colophon]"));
         },
         
         activate: function($el) {
