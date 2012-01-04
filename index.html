@@ -17,14 +17,33 @@
     <style type="text/css">
       /* Override some defaults */
       body {
-        background: url(images/shinjuku.jpg) no-repeat center center fixed;
+        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+        background: url(images/backgrounds/shinjuku.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
       }
-      body {
-        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+      body.barrels {
+          background: url(images/backgrounds/barrels.jpg) no-repeat center center fixed;
+      }
+      body.brooklyn {
+          background: url(images/backgrounds/brooklyn.jpg) no-repeat center center fixed;
+      }
+      body.computer {
+          background: url(images/backgrounds/computer.jpg) no-repeat center center fixed;
+      }
+      body.deckchairs {
+          background: url(images/backgrounds/deckchairs.jpg) no-repeat center center fixed;
+      }
+      body.kyoto {
+          background: url(images/backgrounds/kyoto.jpg) no-repeat center center fixed;
+      }
+      body.shinjuku {
+          background: url(images/backgrounds/shinjuku.jpg) no-repeat center center fixed;
+      }
+      body.tokyo {
+          background: url(images/backgrounds/tokyo.jpg) no-repeat center center fixed;
       }
       ul {
           list-style: disc outside url("images/underscore_bullet.gif");
@@ -146,6 +165,10 @@
         
         // Enable Backbone history
         Backbone.history.start();
+        
+        // Add random class to body, for random background image
+        var bodyClass = _(["barrels", "brooklyn", "computer", "deckchairs", "kyoto", "shinjuku", "tokyo"]).sortBy(Math.random)[0];
+        $("body").addClass(bodyClass);
     });
     </script>
     
