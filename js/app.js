@@ -34,6 +34,12 @@
         template_id: "#contact-template"
     });
     
+    var ColophonView = SimpleView.extend({
+        id: 'colophon-wrapper',
+        className: 'wrapper',
+        template_id: "#colophon-template"
+    });
+    
     // ==========================================================================================    
     // Router
     // ==========================================================================================
@@ -44,7 +50,8 @@
             '': 'home',
             'home': 'home',
             'resume': 'resume',
-            'contact': 'contact'
+            'contact': 'contact',
+            'colophon': 'colophon'
         },
         
         initialize: function(opts) {
@@ -52,6 +59,7 @@
             this.homeView = new HomeView();
             this.resumeView = new ResumeView();
             this.contactView = new ContactView();
+            this.colophonView = new ColophonView();
         },
         
         render: function(view) {
@@ -77,6 +85,11 @@
         contact: function() {
             this.render(this.contactView);
             this.activate($(".nav a[href=#contact]").parent());
+        },
+        
+        colophon: function() {
+            this.render(this.colophonView);
+            this.activate($("footer a[href=#colophon]"));
         },
         
         activate: function($el) {

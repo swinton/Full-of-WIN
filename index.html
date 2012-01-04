@@ -115,6 +115,16 @@
         text-align: center; /* center align it with the container */
         color: #fff;
       }
+      footer a, footer a:hover {
+          color: #fff;
+          text-decoration: none;
+      }
+      footer a {
+          border-bottom: 1px dotted #fff;
+      }
+      footer a:hover {
+          border-bottom: 1px solid #fff;
+      }
       .container {
         width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
       }
@@ -365,7 +375,7 @@
                     <li>Graph theory;</li>
                     <li>Machine learning;</li>
                     <li>Books by Cory Doctorow;</li>
-                    <li>Independent music of the late 80s /early 90s.</li>
+                    <li>Independent music of the late 80s/early 90s.</li>
                 </ul>
             </div>
         </div>
@@ -393,6 +403,28 @@
     </div>
     
     </script>
+    
+    <script type="text/template" id="colophon-template">
+    <div class="page-header">
+        <h1>Colophon</h1>
+    </div>
+        
+    <div class="row">
+        <div class="offset2 span8">
+        <h4>Built with&hellip;</h4>
+        <ul>
+            <li><a href="http://twitter.github.com/bootstrap/">Bootstrap</a>;</li>
+            <li><a href="http://documentcloud.github.com/backbone/">Backbone.js</a>;</li>
+            <li><a href="http://documentcloud.github.com/underscore/">Underscore.js</a>;</li>
+            <li><a href="http://jquery.com/">jQuery</a>;</li>
+            <li><a href="http://macromates.com/">TextMate</a>;</li>
+            <li><a href="http://git-scm.com/">Git</a>.</li>
+        </ul>
+        <p>Social media icons via <a href="http://paulrobertlloyd.com/2009/06/social_media_icons/">Paul Robert Lloyd</a>.</p>
+        <p>Hosted on <a href="http://aws.amazon.com/s3/">Amazon S3</a>.</p>
+        </div>
+    </div>
+    </script>
 </head>
 <body>
     <div class="topbar">
@@ -414,7 +446,7 @@
         </div>
         
         <footer>
-            <p>&copy; Steve Winton | 2012 | &#8220;That was easy&#8221;</p>
+            <p>&copy; Steve Winton | 2012 | <a href="#colophon">Colophon</a></p>
         </footer>
         
     </div>
