@@ -48,10 +48,10 @@
         
         routes: {
             '': 'home',
-            'home': 'home',
-            'resume': 'resume',
-            'contact': 'contact',
-            'colophon': 'colophon'
+            '!/home': 'home',
+            '!/resume': 'resume',
+            '!/contact': 'contact',
+            '!/colophon': 'colophon'
         },
         
         initialize: function(opts) {
