@@ -67,11 +67,7 @@
             $container.empty();
             $container.append(view.render().el);
         },
-        
-        modal: function(view) {
-            
-        },
-        
+                
         home: function() {
             this.render(this.homeView);
             this.activate($(".nav a[href=#]").parent());

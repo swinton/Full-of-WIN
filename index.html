@@ -173,9 +173,20 @@
         // Initialize router
         window.app = new App();
         
+        // Wrap Backbone.history.loadUrl, to trigger page views in GA
+        Backbone.history.loadUrl = _.wrap(Backbone.history.loadUrl, function(loadUrl) {
+            var args = Array.prototype.slice.call(arguments, 1);
+            if (args.length > 0) {
+                try {
+                    _gaq.push(['_trackPageview', args[0]]);                 
+                } catch (e) {}
+            }
+            loadUrl.apply(Backbone.history, args);
+        });
+        
         // Enable Backbone history
         Backbone.history.start();
-        
+                
         // Add random class to body, for random background image
         var bodyClass = _(["barrels", "brooklyn", "computer", "deckchairs", "kyoto", "shinjuku", "tokyo"]).sortBy(Math.random)[0];
         $("body").addClass(bodyClass);
