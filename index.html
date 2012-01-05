@@ -45,6 +45,12 @@
       body.tokyo {
           background: url(images/backgrounds/tokyo.jpg) no-repeat center center fixed;
       }
+      body.leysin {
+          background: url(images/backgrounds/leysin.jpg) no-repeat center center fixed;
+      }
+      body.rocket-cycle {
+          background: url(images/backgrounds/rocket-cycle.jpg) no-repeat center center fixed;
+      }
       ul {
           list-style: disc outside url("images/underscore_bullet.gif");
       }
@@ -114,6 +120,7 @@
       .container > footer p {
         text-align: center; /* center align it with the container */
         color: #fff;
+        margin-bottom: 6px;
       }
       footer a, footer a:hover {
           color: #fff;
@@ -124,6 +131,9 @@
       }
       footer a:hover {
           border-bottom: 1px solid #fff;
+      }
+      .container > footer iframe {
+          margin-left: 341px;
       }
       .container {
         width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
@@ -508,6 +518,7 @@
         
         <footer>
             <p>&copy; Steve Winton | 2012 | <a href="#!/colophon">Colophon</a></p>
+            <a href="https://twitter.com/steveWINton" class="twitter-follow-button" data-show-count="false">Follow @steveWINton</a>
         </footer>
         
     </div>
@@ -525,5 +536,6 @@
       })();
 
     </script>
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 </body>
 </html>
