@@ -48,6 +48,7 @@
         
         routes: {
             '': 'home',
+            '!/': 'home',
             '!/home': 'home',
             '!/resume': 'resume',
             '!/contact': 'contact',
